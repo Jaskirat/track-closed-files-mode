@@ -1,0 +1,37 @@
+* Track & Restore recently closed files
+
+This minor mode when enabled, will track recently closed files in
+emacs and enable you to restore them. 
+
+Inspired by the Ctrl-Shift-T feature available in all modern browsers
+today. 
+
+C-S-y is an alternative key binding which can be used to show the list
+of recently closed files and assist in choosing one of those.
+
+
+* Installation
+
+** From Marmalade
+You can install this package from [[http://marmalade-repo.org/packages/track-closed-files/0.1][Marmalade]]
+
+M-x package-install track-closed-files
+
+And then add the following lines to your config
+
+#+BEGIN_SRC elisp
+  (require 'track-closed-files)
+  (track-closed-files-mode)
+#+END_SRC
+
+** Alternative Installation
+$ cd ~/.emacs.d/vendor
+$ git clone git://github.com/jaskirat/track-closed-files-mode.git
+
+In your emacs config:
+  
+#+BEGIN_SRC elisp
+  (add-to-list 'load-path "~/.emacs.d/vendor/track-closed-files.el")
+  (require 'track-closed-files)
+  (track-closed-files-mode)
+#+END_SRC
